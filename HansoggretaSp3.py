@@ -1,4 +1,4 @@
-class HansogGretaSp(object):
+class HansogGretaSp3(object):
      def getName(self): pass
      def getDescription(self): pass
      def answer(self): pass
@@ -8,29 +8,44 @@ class HansogGretaSp(object):
      def removeElement(self): pass
      def eldhusLokad(self): pass
 
-class Herbergi(HansogGreta):
+class Herbergi(HansogGretaSp3):
     def __init__(self, name, herb):
         self.name= name
         self.herb= herb
-        self.herb1='Herbergi 1'
-        self.herb2='Herbergi 2'
-        self.description= description
+        if self.herb == 1:
+            #self.herb='Herbergi 1'
+            self.StartingProblem()
+        else:
+            #self.herb='Herbergi 2'
+            self.StartingProblem()
 
-    def StartingHerbergi():
+    def StartingProblem(self): #Method sem býr til þraut, g.r.f. að hluturinn self.herb haldist hér úr smið, t.d. ef self.herb == 1 þá helst það hér
         description= self.getDescription()
-        self.promblem1()
+        print(description)
+        if self.herb == 1:
+            self.problem1()
+        else:
+            self.problem2()
+
+    def problem1():
+        description= self.getDescription()
+        print(description)
+        print('hæ')
+
+    def problem2():
+        description= self.getDescription()
+        print(description)
 
     def getName(self):
         return self.name
     def getDescription(self):
         if self.herb == 1:
-            print('þú ert í herbergi :',self.herb1)
-            return 'Stórt herbergi, sem inniheldur sófa og arinn'
-            self.getname()
-        elif herb == 2:
-            return 'Herbergið þar sem vonda nornin sefur'
+            print('Þú ert í herberginu:', self.name)
+            return 'Herbergið þar sem vonda nornin horfir á sjónvarpið'
         else:
-            return 'Herbergið þar sem vonda nornin fer á klósettið'
+            return 'Herbergið þar sem vonda nornin sefur'
+        #else:
+        #    return 'Herbergið þar sem vonda nornin fer á klósettið'
 
 class Persona(Herbergi):
     def __init__(self, kyn, name, description):
@@ -65,18 +80,18 @@ def main():
             s = Persona(0, 'Hans', 'Lítill strákur með dökkt hár')
             break
         else:
-            print("Þú þarft að srifa 1 fyrir Grétu eða 2 fyrir Hans.")
+            print("Þú þarft að skrifa 1 fyrir Grétu eða 2 fyrir Hans.")
             val = input ('Mitt val: ')
             val = int(val)
     while(win == False):
-        herb = input('Hvaða herbergi viltu fara í? Veldu 1 fyrir stofu, 2 fyrir svefnherbergi og 3 fyrir baðherbergi.')
-        herb = int(herb)
-        des = 1
-        d = Herbergi(herb, des)
+    #    herb = input('Hvaða herbergi viltu fara í? Veldu 1 fyrir stofu, 2 fyrir svefnherbergi og 3 fyrir baðherbergi.')
+    #    herb = int(herb)
+        print('Þú ert komin/n í stofuna. Gangi þér vel að leysa þrautina.')
+        herb = 1
+        h1 = Herbergi('Stofa', herb)
         #input nýtt herbergi
-
-        des=2
-        d2=Herbergi(herb, des)
+        herb=2
+        h2=Herbergi(herb, des)
 
 if __name__ == "__main__":
     main()
