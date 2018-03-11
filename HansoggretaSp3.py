@@ -24,17 +24,14 @@ class Herbergi(HansogGretaSp3):
         print(description)
         if self.herb == 1:
             self.problem1()
+            print('hallo')
         else:
             self.problem2()
 
     def problem1():
-        description= self.getDescription()
-        print(description)
         print('hæ')
 
-    def problem2():
-        description= self.getDescription()
-        print(description)
+    def problem2():pass
 
     def getName(self):
         return self.name
