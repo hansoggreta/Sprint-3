@@ -15,7 +15,7 @@ class Herbergi(HansogGretaSp3):
         if self.herb == 1:
             #self.herb='Herbergi 1'
             self.StartingProblem()
-        else:
+        elif self.herb == 2:
             #self.herb='Herbergi 2'
             self.StartingProblem()
 
@@ -24,14 +24,21 @@ class Herbergi(HansogGretaSp3):
         print(description)
         if self.herb == 1:
             self.problem1()
-            print('hallo')
-        else:
+        elif self.herb == 2:
             self.problem2()
 
-    def problem1():
-        print('hæ')
+    def problem1(self):
+        print('Hvað er 1+1?')
+        s1 = input('Mitt svar:')
+        s1 = int(s1)
+        while(s1 != 2):
+            print('Rangt svar. Reyndu aftur!')
+            print('Hvað er 1+1?')
+            s1 = input('Mitt svar:')
+        print('Rétt hjá þér! Áfram í næsta herbergi.')
+        return
 
-    def problem2():pass
+    def problem2(self):pass
 
     def getName(self):
         return self.name
@@ -87,8 +94,10 @@ def main():
         herb = 1
         h1 = Herbergi('Stofa', herb)
         #input nýtt herbergi
+        print('Þú ert komin/n í svefnherbergið. Gangi þér vel að leysa þrautina.')
         herb=2
-        h2=Herbergi(herb, des)
+        h2=Herbergi('Svefnherbergi', herb)
+        break
 
 if __name__ == "__main__":
     main()
