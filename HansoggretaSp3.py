@@ -1,7 +1,3 @@
-#!/usr/local/bin/python
-# coding: latin-1
-import os, sys
-
 class HansogGretaSp3(object):
      def getName(self): pass
      def getDescription(self): pass
