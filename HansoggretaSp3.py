@@ -21,7 +21,7 @@ class HansogGretaSp3(object):
      def problem4(self): pass
 
 class Lif(HansogGretaSp3):
-    def __init__(self, herb, hjalp): #Hér vil ég að við tökum líka inn lífin og tilraunirnar sem við eigum eftir...
+    def __init__(self, herb, hjalp):
         self.herb = herb
         self.hjalp = hjalp
         #self.lif = lif
