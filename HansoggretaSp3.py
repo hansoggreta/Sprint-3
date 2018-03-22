@@ -177,7 +177,7 @@ class Herbergi(HansogGretaSp3):
             data = spurning.read()
         print(data)
 
-        print('Ýttu á einhvern takk á lyklaborðinu og þá mun birtast mynd af glugganum í kofanum.)
+        print('Ýttu á einhvern takk á lyklaborðinu og þá mun birtast mynd af glugganum í kofanum.')
 
         a = 0
         while (a != 1 and tilraun > 0):
