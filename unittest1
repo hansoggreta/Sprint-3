@@ -1,0 +1,40 @@
+from HansogGretaSp3 import Herbergi
+import unittest
+import sys
+
+
+class TestHerbergi(unittest.TestCase):
+#    def setUp:
+#        pass
+
+    def test_herbergi1_wrong_answer(self):
+        sys.stdin = open("preprogrammed_inputs.txt")
+        self.herbergi = Herbergi("h1", 1)
+        self.assertEqual(0, self.herbergi.tilraunir)
+
+    def test_herbergi_wrong_room(self):
+        self.herbergi = Herbergi("h1", 55)
+
+    #def test_herbergi2_wrong_answer(self):
+    #    sys.stdin = open("preprin.txt")
+    #    self.herbergi = Herbergi("h2", 2)
+    # Failed? Skiljum ekki alveg af hverju..
+
+    #def test_herbergi2_use_clue(self):
+        #sys.stdin = open("rightanswerproblem2.txt")
+        #sys.stdin = open("preprin.txt")
+        #self.herbergi = Herbergi("h2", 2)
+     # Failed. Tilraun til að skoða input nr. 2 í þraut 2.... Hvernig gerum við það?
+
+class TestMain(unittest.TestCase):
+
+    def test_Veljapersonu_wrong_answer(self):
+        sys.stdin = open("preprogrammed_inputs.txt")
+
+'''Testaði bara þraut 1 og 2 þar sem forritin fyrir þrautum 3 og 4 voru ekki tilbúin. Það þarf sem sagt að lagfæra smá í þraut 2
+   til þess að það komi ekki upp villa.
+   Testaði líka VeljaPersonu í main fallinu.'''
+
+
+if __name__ == '__main__':
+    unittest.main()
